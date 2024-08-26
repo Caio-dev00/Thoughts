@@ -1,0 +1,118 @@
+* {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  background-color: cadetblue;
+  color: #FFF
+}
+
+ /* LOGO */
+#logo img {
+  height: 40px;
+}
+
+#navbar {
+  padding: 1.2em 1.4em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #CCC;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li {
+  margin-left: 1em;
+}
+
+#navbar ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#navbar ul li a:hover{
+  color: aquamarine;
+}
+
+/* CONTAINER */
+.container {
+  min-height: 70vh;
+  padding: 2em;
+}
+/* FOOTER */
+footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #CCC;
+}
+
+footer span {
+  font-weight: bold;
+  color:rgb(255, 193, 35);
+}
+
+/* REGISTER AND LOGING */
+.auth-container {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container h2 {
+  margin-bottom: 1em;
+  color: #FFF;
+  border-left: 4px solid rgb(255, 193, 35);
+  padding: .3em;
+  width: 100px;
+}
+
+.auth-container a {
+  color: rgb(255, 193, 35);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 7px;
+  border-radius: 3px; 
+  border: none;
+  background-color: #FFF;
+}
+
+form input[type = 'submit'],
+.btn {
+  background-color: rgb(255, 193, 35);
+  color: #FFF;
+  border: none;
+  border-radius: 0.4em;
+  padding: .5em 1.2em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+form input[type = 'submit']:hover,
+.btn:hover {
+  background-color: rgb(212, 161, 32);
+}
