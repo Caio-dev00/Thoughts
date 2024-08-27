@@ -33,7 +33,6 @@ class AuthController {
       res.render('auth/register')
 
       return
-
     }
 
     // create a password
@@ -61,6 +60,11 @@ class AuthController {
       console.log(error)  
     }
 
+  }
+
+  static logout(req, res) {
+    req.session.destroy()
+    res.redirect('/login')
   }
 }
 
