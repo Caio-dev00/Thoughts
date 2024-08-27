@@ -44,6 +44,20 @@
   min-height: 70vh;
   padding: 2em;
 }
+
+/* MESSAGES */
+
+.message {
+  padding: 1em;
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 2em;
+  max-width: 60%;
+}
+
 /* FOOTER */
 footer {
   height: 150px;
@@ -95,6 +109,7 @@ footer span {
   border-radius: 3px; 
   border: none;
   background-color: #FFF;
+  color: #000;
 }
 
 form input[type = 'submit'],

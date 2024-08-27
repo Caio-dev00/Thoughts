@@ -71,7 +71,7 @@ app.use('/', authRoutes)
 app.get('/', ThoughtController.showThoughts)
 
 
-conn.sync()
+conn.sync({force: true})
     .then(() => {
       app.listen(3000)
       console.log('Server is running...')
