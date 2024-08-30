@@ -58,6 +58,30 @@
   max-width: 60%;
 }
 
+/* CREATE | EDIT FORM */
+
+.thought-form-container a {
+  color: #004085;
+  text-decoration: none;
+}
+
+.thought-form-container a:hover {
+  color: #FFF;
+}
+
+.thought-form-container h1 {
+  margin-bottom: 1em;
+  color: #FFF;
+  border-left: 4px solid rgb(255, 193, 35);
+  padding: .3em;
+  margin-top: 1em;
+}
+
+.thought-form-container form {
+  max-width: 30%;
+  margin-top: 1.5em;
+}
+
 /* FOOTER */
 footer {
   height: 150px;
