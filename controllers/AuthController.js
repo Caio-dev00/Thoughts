@@ -8,6 +8,36 @@ class AuthController {
     res.render('auth/login')
   }
 
+  static async loginPost(req, res) {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ where: { email: email } })
+
+    if(!user) {
+      req.flash('message', 'User not found!')
+      res.render('auth/login')
+
+      return
+    }
+
+    const passwordMatch = bcrypt.compareSync(password, user.password)
+
+    if(!passwordMatch) {
+      req.flash('message', 'Password invalid!')
+      res.render('auth/login')
+
+      return
+    }
+    
+    req.session.userId = user.id
+    req.flash('message', 'Login successful!')
+
+    req.session.save(() => {
+      res.redirect('/')
+    })
+
+  }
+
   static register(req, res) {
     res.render('auth/register')
   }
@@ -25,7 +55,7 @@ class AuthController {
     }
 
     // check if user exists
-    const checkIfUserExistis = await User.findOne({where: { email: email }})
+    const checkIfUserExistis = await User.findOne({ where: { email: email } })
 
     if(checkIfUserExistis) {
 
@@ -49,7 +79,7 @@ class AuthController {
 
       const createdUser = await User.create(user)
 
-      req.session.userid = createdUser.id
+      req.session.userId = createdUser.id
       req.flash('message', 'Account created with successful')
 
       req.session.save(() => {
